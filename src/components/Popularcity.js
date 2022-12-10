@@ -3,6 +3,28 @@ import { Popularcitycard } from './cards/Popularcitycard'
 import './style-main.css'
 
 export const Popularcity = () => {
+  const mainSite = [
+    {
+      'name' : 'HSR Layout',
+      'stay' : 3,
+      'imgt' : '',
+    },
+    {
+      'name' : 'Malleshwaram',
+      'stay' : 2,
+      'imgt' : '',
+    },
+    {
+      'name' : 'Marathalli',
+      'stay' : 4,
+      'imgt' : '',
+    },
+    {
+      'name' : 'Hosur Road',
+      'stay' : 8,
+      'imgt' : '',
+    }
+  ]
   return (
     <div>
 
@@ -18,16 +40,16 @@ export const Popularcity = () => {
         <div class="container ">
          <div class="row">
            <div class="col">
-             <Popularcitycard/>
+             <Popularcitycard city={mainSite[0]} />
            </div>
            <div class="col">
-             <Popularcitycard/>
+             <Popularcitycard city={mainSite[1]} />
            </div>
            <div class="col">
-             <Popularcitycard/>
+             <Popularcitycard city={mainSite[2]} />
            </div>
            <div class="col">
-             <Popularcitycard/>
+             <Popularcitycard city={mainSite[3]} />
            </div>
          </div>
        </div>
