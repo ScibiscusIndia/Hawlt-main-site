@@ -7,22 +7,22 @@ export const Popularcity = () => {
     {
       'name' : 'HSR Layout',
       'stay' : 3,
-      'imgt' : '',
+      'imgt' : '/images/city/hsr.jpg',
     },
     {
       'name' : 'Malleshwaram',
-      'stay' : 2,
-      'imgt' : '',
+      'stay' : 0,
+      'imgt' : '/images/city/pic2city.jpg',
     },
     {
-      'name' : 'Marathalli',
-      'stay' : 4,
-      'imgt' : '',
+      'name' : 'koramangala',
+      'stay' : 2,
+      'imgt' : '/images/city/korma4city.jpg',
     },
     {
       'name' : 'Hosur Road',
-      'stay' : 8,
-      'imgt' : '',
+      'stay' : 0,
+      'imgt' : '/images/city/pic3city.jpg',
     }
   ]
   return (
