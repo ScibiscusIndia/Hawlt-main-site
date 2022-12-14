@@ -68,6 +68,7 @@
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   padding-top: 3px;
   padding-bottom: 2px;
+  color: black;
 }
 .div,
 .person-div,
@@ -77,6 +78,7 @@
   letter-spacing: -0.05em;
   line-height: 100%;
   display: inline-block;
+  color: black;
 }
 .total-cost-div {
   top: 234px;
@@ -88,12 +90,13 @@
 .div,
 .person-div {
   top: 248px;
+  color: black;
 }
 .person-div {
   left: 82px;
   font-size: 10px;
   font-family: 'Poppins', sans-serif;
-  padding-left: 3px;
+  padding-left: 10px;
   padding-top: 11px;
   color: rgba(0, 0, 0, 0.65);
 }
@@ -101,11 +104,13 @@
   left: 50px;
   font-weight: 600;
   margin-top: 10px;
+  color: black;
 }
 .swamy-vivekananda-rd {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: 10px;
+  color: black;
 }
 .button-div,
 .swamy-vivekananda-rd-opp-cha {
@@ -134,6 +139,7 @@
   border-width: 1.5px;
   padding: 5px;
   border-color: grey;
+  color: black;
 }
 .buttons :hover{
   background-color: black;
@@ -275,6 +281,10 @@
 }
 
 /* property-card */
+.property-card{
+  /* background-color: red; */
+  width: 400px;
+  }
 @media only screen and (max-width: 600px){
 	.property-card{
     /* background-color: red; */
@@ -283,7 +293,7 @@
 }
 @media screen and (min-width:768px) and (max-width:1023px){
     .property-card{
-    background-color: red;
+    /* background-color: red; */
     width:350px;
     }
 }

@@ -37,6 +37,7 @@
     background-color: white;
 }
 
+
 /* host your property */
 .seemore-list-host{
     list-style: none;
@@ -171,5 +172,14 @@
     color: white;
 }
 
+/* loader-allproperty */
+.loader-allproperty{
+    margin-bottom: 50px;
+}
 
+/* user-logo */
+.user-logo{
+    padding-top: 6px;
+    padding-right: 10px;
+}
 /* 👌😍 */

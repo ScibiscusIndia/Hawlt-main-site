@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './style-main.css'
 
 export const Seemore = () => {
@@ -23,7 +24,14 @@ export const Seemore = () => {
                     <p className="seemore-para">Now with <strong>Hawlt</strong><span>CARE</span>.</p>
                 </li>
                 <li>
-                    <button className='seemore-but-01'><strong>See more</strong></button>
+                    <button type="button" class="btn btn-dark seemore-but-01">
+                         <strong>
+                            <Link to = '/AllpropMenu'>
+                                <span style={{color:"#e83f60"}} className='seemore-sec-but'>See more</span> 
+                            </Link>
+                        </strong>
+                    </button>
+
                 </li>
                 </ul> 
             </div>
@@ -31,25 +39,8 @@ export const Seemore = () => {
   )
 }
 
-{/* <ul className="seemore-list">
-                        <li>
-                            <h1 className="display-6">Explore more options...</h1>
-                        </li>
-                        <li>
-                            <p className="seemore-para">We have world class of rooms options for you as per your requriments. Our clients hosted there best properties ever of which you can take taste. Single sharing to multi sharing with variety of facilities.</p>
-                        </li>
-                        <li>
-                            <button>See more</button>
-                        </li>
-                    </ul>  */}
 
 
-// https://img.freepik.com/free-vector/address-concept-illustration_114360-321.jpg?w=996&t=st=1669715908~exp=1669716508~hmac=f0ceb7af4374fe3f58a80f16867f4a1f5b4c0cef97c4cc2e96d74a8172881bf0
-{/* <ul>
-                        <li>
-                            <h1 class="display-6">Host your property.</h1>
-                        </li>
-                        <li>
-                            <p>If you are interested in hosting your property, you can contact a rental management company to help you manage the rental process. They will help you find tenants, collect rent, maintain the property, and handle any legal issues that may arise. They can also help you set up the appropriate insurance and pricing for your property.</p>
-                        </li>
-                    </ul> */}
+{/* <button className=''>
+                       
+                    </button> */}

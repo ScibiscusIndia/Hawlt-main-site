@@ -1,7 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Stylecard.css'
+import { useAuth0 } from "@auth0/auth0-react";
 
-export const Propertycard = () => {
+export const Propertycard = (props) => {
+   const { user, isAuthenticated, isLoading } = useAuth0();
   return (
     <div className="property-card">
         <div class="iphone-8-1">
@@ -9,20 +12,23 @@ export const Propertycard = () => {
       <img
         class="green-grass-background-footbal-icon"
         alt=""
-        src="public/greengrassbackgroundfootballfield-419692262-1@2x.png"
+        src={props.prop1 == null ? "Loading..." : props.prop1.propertyimage}
       />
       <div class="rectangle-div1"></div>
-      <div class="prasanth-pg-hostel">Prasanth Pg Hostel</div>
+      <div class="prasanth-pg-hostel">{props.prop1 == null ? "Loading..." : props.prop1.name}</div>
       <div class="total-cost-div">Total cost</div>
-      <div class="person-div">/ Person</div>
-      <div class="div">8500</div>
+      <div class="person-div"> / Person</div>
+      <div class="div">{props.prop1 == null ? "Loading..." : <>{props.prop1.sharing.single}</>}</div>
       <div class="swamy-vivekananda-rd-opp-cha">
         <p class="swamy-vivekananda-rd">
-          Swamy Vivekananda Rd, opp. Chaitanya Villas, Prasanth Layout,
+          {props.prop1 == null ? "Loading..." : <>{props.prop1.address.area}, {props.prop1.address.state}, {props.prop1.address.country}</>}
         </p>
       </div>
       <button class="buttons">
-        <div class="button-div">Book Now</div>
+       
+        <Link to={isAuthenticated ? '/UserCheckout89Property' : '/GuestRoute98page'} state={{from : props.prop1}} >
+          <div class="button-div"><span >Book Now</span> </div>
+        </Link>
       </button>  
       
       <input class="buttons-input" type="text" /><img
@@ -71,3 +77,10 @@ export const Propertycard = () => {
     </div>
   )
 }
+
+
+//  <img
+//         class="green-grass-background-footbal-icon"
+//         alt=""
+//         src="public/greengrassbackgroundfootballfield-419692262-1@2x.png"
+//       />

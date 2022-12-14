@@ -1,12 +1,25 @@
 import React from 'react'
 import { NavBar } from './NavBar'
 import { Footer } from './Footersection'
+import { useLocation } from "react-router-dom"
+import { useEffect } from 'react'
+import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from 'react-router-dom'
 
 export const Subpage = () => {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+  const location = useLocation();
+  useEffect(()=>{
+    console.log(location);
+  },[])
   return (
     <div>
       <div className='subpage-nav'>
         <NavBar/>
+      </div>
+
+      <div class="alert alert-primary container" role="alert">
+      check it out! 🎉 our best deals <strong><a href="#">here</a></strong>
       </div>
       
       <div className="container text-center">
@@ -35,28 +48,32 @@ export const Subpage = () => {
           <div className='container'>
             <br /><br />
 
-            <h2>Prasanth Pg Hostel</h2>
+            <h2>{location.state.from.name}</h2>
             <p class="lead">
-              <strong>Swamy Vivekananda Rd, opp. Chaitanya Villas, Prasanth Layout,</strong> 
+              <strong>
+                {location.state.from.address.area} . {location.state.from.address.state} . {location.state.from.address.state} 
+              </strong> 
             </p>
             <p><strong>₹ 12,000</strong> / Person . Whitefield, Bangalore, India</p>
           
             <p>
-              Colive
+              {location.state.from.forgender}
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 7.066A7.501 7.501 0 0 1 12 22a7.5 7.5 0 0 1-1-14.934V1h2v6.066zM12 20a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11z" fill="rgba(0,0,0,0.9)"/></svg>
             </p>
             
             {/* button */}
+            <Link to={isAuthenticated ? '/UserCheckout89Property' : '/GuestRoute98page'}>
             <div className="subpage-last-but">
               <button type="button" class="btn btn-dark">Book</button>
             </div>
+            </Link>
 
             <hr />
 
             <br />
 
             <h4>Property hosted by Hawlt</h4>
-            <p>10 Floors . 20 bedrooms . 200 square feet</p>
+            <p>{location.state.from.floors} Floors . {location.state.from.bedroom} bedrooms . {location.state.from.squarefeet} square feet</p>
             <br />
             <h4>Sharing availability</h4>
             {/* sharing */}
@@ -64,10 +81,10 @@ export const Subpage = () => {
               <div>
                 <div className="row">
                   <div className="col">
-                    Single sharing <strong>₹ 12000/-</strong>
+                    Single sharing <strong>₹ {location.state.from.sharing.single}/-</strong>
                   </div>
                   <div className="col">
-                    Double sharing <strong>₹ 7000/-</strong>
+                    Double sharing <strong>₹ {location.state.from.sharing.double}/-</strong>
                   </div>
                 </div>
               </div>
@@ -75,10 +92,10 @@ export const Subpage = () => {
                <div>
                 <div className="row">
                   <div className="col">
-                    Triple sharing <strong>₹ 6000/-</strong>
+                    Triple sharing <strong>₹ {location.state.from.sharing.triple}/-</strong>
                   </div>
                   <div className="col">
-                    Multi sharing <strong>₹ 5000/-</strong>
+                    Multi sharing <strong>₹ {location.state.from.sharing.multi}/-</strong>
                   </div>
                 </div>
               </div>
@@ -192,7 +209,7 @@ export const Subpage = () => {
               Location
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 20.9l4.95-4.95a7 7 0 1 0-9.9 0L12 20.9zm0 2.828l-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" fill="rgba(0,0,0,0.84)"/></svg>
             </h4>
-            <a href="www.googlemap.com">https:/googlemaps/Swamy Vivekananda Rd, opp. Chaitanya Villas, Prasanth Layout,</a>
+            <a href={location.state.from.location}>{location.state.from.location}</a>
             <br /><a href="#"><strong><span style={{color:"black"}}><u>Click here</u></span></strong></a> to see on google map.
             <br /><br />
             <hr />
@@ -208,30 +225,27 @@ export const Subpage = () => {
                   <div className="col">
                     <div className="card" >
                       <div className="card-body">
-                        <h5 className="card-title">Aman kumar</h5>
-                        <h6 className="card-subtitle mb-2 text-muted">Talent acquisition</h6>
-                        <p className="card-text">I lived this place for about 2 years. It was really a very good experience for me. I will be recommend this place to others.</p>
+                        <h5 className="card-title">{location.state.from.review.name}</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">{location.state.from.review.accupation}</h6>
+                        <p className="card-text">{location.state.from.review.message}</p>
                       </div>
                     </div>
                   </div>
                   <div className="col">
-                     <div className="card" >
-                      <div className="card-body">
-                        <h5 className="card-title">Tarun sharma</h5>
-                        <h6 className="card-subtitle mb-2 text-muted">Student</h6>
-                        <p className="card-text">I am currently residing in this property and overall culture, environment is nice. Food is also good and can be considered.</p>
-                      </div>
-                    </div>
+                     
                   </div>
                 </div>
               </div>
               <br /><br />
           </div>
 
+          <Link to={isAuthenticated ? '/UserCheckout89Property' : '/GuestRoute98page'}>
           <div className="container subpage-last-but">
             <button type="button" class="btn btn-dark">Book</button>
           </div>
+          </Link>
 
+          
           <Footer/>
 
     </div>
