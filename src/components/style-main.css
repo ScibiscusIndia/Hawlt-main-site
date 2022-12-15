@@ -182,4 +182,11 @@
     padding-top: 6px;
     padding-right: 10px;
 }
+.col{
+    transition: transform .4s;
+}
+.col:hover{
+    transform: scale(1.1);
+}
+
 /* 👌😍 */

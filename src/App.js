@@ -18,6 +18,7 @@ import { Allproperty } from './components/Allproperty';
 import { Userpro } from './components/users/Userpro';
 import { Checkout } from './components/checkout/Checkout';
 import { Guest } from './components/users/Guest';
+import { Areaone } from './components/pgareas/Areaone';
 // import { Garbage } from './components/Garbage';
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path='/UserProfile' element={<Userpro/>} />
         <Route path='/UserCheckout89Property' element={<Checkout/>} />
         <Route path='/GuestRoute98page' element={<Guest/>} />
+        <Route path='/popularcity89page' element={<Areaone/>} />
       </Routes>
     </div>
   );

@@ -1,22 +1,26 @@
 import React from 'react'
 import { Popularcitycard } from './cards/Popularcitycard'
+import { Link } from 'react-router-dom'
 import './style-main.css'
+import { useEffect, useState } from 'react'
 
 export const Popularcity = () => {
+
+
   const mainSite = [
     {
       'name' : 'HSR Layout',
-      'stay' : 3,
+      'stay' : 5,
       'imgt' : '/images/city/hsr.jpg',
     },
     {
-      'name' : 'Malleshwaram',
-      'stay' : 0,
+      'name' : 'Bomman',
+      'stay' : 2,
       'imgt' : '/images/city/pic2city.jpg',
     },
     {
       'name' : 'koramangala',
-      'stay' : 2,
+      'stay' : 3,
       'imgt' : '/images/city/korma4city.jpg',
     },
     {
@@ -25,6 +29,9 @@ export const Popularcity = () => {
       'imgt' : '/images/city/pic3city.jpg',
     }
   ]
+
+
+  
   return (
     <div>
 
@@ -37,19 +44,27 @@ export const Popularcity = () => {
       </div>
 
       <div className="scroll-city">
-        <div class="container ">
-         <div class="row">
-           <div class="col">
+        <div className="container ">
+         <div className="row">
+           <div className="col">
+            <Link to='/popularcity89page' state = {{from : {area : "HSR LAYOUT sector 1"}}}>
              <Popularcitycard city={mainSite[0]} />
+            </Link>
            </div>
-           <div class="col">
-             <Popularcitycard city={mainSite[1]} />
+           <div className="col">
+             <Link to='/popularcity89page' state = {{from : {area :  mainSite[1].name}}}>
+              <Popularcitycard city={mainSite[1]} />
+             </Link>
            </div>
-           <div class="col">
-             <Popularcitycard city={mainSite[2]} />
+           <div className="col">
+             <Link to='/popularcity89page' state = {{from : {area : mainSite[2].name}}}>
+              <Popularcitycard city={mainSite[2]} />
+             </Link>
            </div>
-           <div class="col">
+           <div className="col">
+             <Link to='/popularcity89page' state = {{from : {area : null}}}>
              <Popularcitycard city={mainSite[3]} />
+             </Link>
            </div>
          </div>
        </div>
