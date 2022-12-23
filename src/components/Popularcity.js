@@ -46,22 +46,22 @@ export const Popularcity = () => {
       <div className="scroll-city">
         <div className="container ">
          <div className="row">
-           <div className="col">
+           <div className="col popularcity-cards-col">
             <Link to='/popularcity89page' state = {{from : {area : "HSR LAYOUT sector 1"}}}>
              <Popularcitycard city={mainSite[0]} />
             </Link>
            </div>
-           <div className="col">
+           <div className="col popularcity-cards-col">
              <Link to='/popularcity89page' state = {{from : {area :  mainSite[1].name}}}>
               <Popularcitycard city={mainSite[1]} />
              </Link>
            </div>
-           <div className="col">
+           <div className="col popularcity-cards-col">
              <Link to='/popularcity89page' state = {{from : {area : mainSite[2].name}}}>
               <Popularcitycard city={mainSite[2]} />
              </Link>
            </div>
-           <div className="col">
+           <div className="col popularcity-cards-col">
              <Link to='/popularcity89page' state = {{from : {area : null}}}>
              <Popularcitycard city={mainSite[3]} />
              </Link>

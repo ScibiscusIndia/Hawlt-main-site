@@ -45,6 +45,7 @@ export const Footer = () => {
                 <li><a href="#">Team</a></li>
                 <li><a href="#">Career</a></li>
                 <li><a href="#">Contacts</a></li>
+                <li><a href="https://scibiscusindia.github.io/Hawlt-main-site-Blog-Area/">Blog</a></li>
               </ul>
             </div>
           </div>

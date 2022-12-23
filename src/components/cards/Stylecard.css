@@ -269,7 +269,8 @@
 @media only screen and (max-width: 600px){
 	.travel-card{
     /* background-color: red; */
-    width:350px;
+    width:340px;
+    border-style: none;
     }
 }
 
@@ -294,7 +295,7 @@
 @media screen and (min-width:768px) and (max-width:1023px){
     .property-card{
     /* background-color: red; */
-    width:350px;
+    width:340px;
     }
 }
 

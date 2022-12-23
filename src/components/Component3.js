@@ -4,23 +4,25 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+//property data API
+import {propAPI} from './backend/Main'
 
 
 export const Component3 = () => {
 
 
-  //calling the data api.
-  const [ propDet, setPropData ] = useState(null);
+  //calling the data api.;
+  const [ propDet, setPropData ] = useState([]);
 
-    useEffect(()=>{
-        const fetchPromise = fetch("/properties_menu");
-        fetchPromise.then(response => {
-            return response.json();
-            }).then(e => {
-                setPropData(e);
-                // console.log(e);
-        })
-    },[]);
+    // useEffect(()=>{
+    //     const fetchPromise = fetch("/properties_menu");
+    //     fetchPromise.then(response => {
+    //         return response.json();
+    //         }).then(e => {
+    //             setPropData(e);
+    //             console.log(e);
+    //     })
+    // },[]);
 
     // if (propDet == null){
     //   console.log("null");
@@ -28,6 +30,11 @@ export const Component3 = () => {
     // else{
     //   console.log(propDet.property1.name)
     // }
+
+    useEffect(()=>{
+      setPropData(propAPI);
+    })
+    // console.log(propAPI['property);
     
 
   return (
@@ -35,7 +42,7 @@ export const Component3 = () => {
       <div className='heading-compo3'>
         <p class="h1"><strong>Some hand picked stays <br /> For you.😍</strong></p>
       </div><br />
-    <div className="container text-center">
+    <div className="container text-center compo3-mob-view">
       <div className="row">
         <div className="col">
           
@@ -72,7 +79,7 @@ export const Component3 = () => {
       </div>
       </div>
       {/* second row */}
-      <div className="container">
+      <div className="container compo3-mob-view">
       <div className="row">
         <div className="col">
           {propDet == null ?

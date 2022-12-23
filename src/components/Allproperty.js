@@ -4,21 +4,30 @@ import { NavBar } from './NavBar'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Propertycard } from './cards/Propertycard'
+import {propAPI} from '../components/backend/Main'
 
 export const Allproperty = () => {
     //calling the data api.
   const [ propDet, setPropData ] = useState([]);
   const [load, setLoad] = useState(false)
 
+    // useEffect(()=>{
+    //     const fetchPromise = fetch("/properties_menu");
+    //     fetchPromise.then(response => {
+    //         return response.json();
+    //         }).then(e => {
+    //             setPropData(e);
+    //             setLoad(true)
+    //             console.log(propDet)
+    //     })
+    // },[]);
+
     useEffect(()=>{
-        const fetchPromise = fetch("/properties_menu");
-        fetchPromise.then(response => {
-            return response.json();
-            }).then(e => {
-                setPropData(e);
-                setLoad(true)
-        })
-    },[]);
+        setPropData(propAPI);
+    })
+
+    // console.log(propAPI)
+
 
   return (
     <div >
@@ -34,7 +43,7 @@ export const Allproperty = () => {
             <div class="row">
                 <div class="col">
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                        <input class="form-control me-2 search-input-all" type="search" placeholder="Search" aria-label="Search"/>
                         <button class="btn btn-outline-success" type="submit">Search</button>
                   </form>
                 </div>
@@ -51,7 +60,7 @@ export const Allproperty = () => {
 
         {/* LOADING SECTION */}
 
-        <center>
+        {/* <center>
         <div className='loader-allproperty'>
             {
                 load ? null : 
@@ -63,12 +72,12 @@ export const Allproperty = () => {
                 </>
             }
         </div>
-        </center>
+        </center> */}
 
 
 
 
-            <div class="container text-center">
+            <div class="container text-center all-prop-main">
                 <div class="row">
                      {Object.entries(propDet).map(([key, value]) => {
                         return (

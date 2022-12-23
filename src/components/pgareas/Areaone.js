@@ -6,24 +6,32 @@ import { Link } from 'react-router-dom';
 import { NavBar } from '../NavBar';
 import { Footer } from '../Footersection';
 
+//calling the property API
+import { propAPI } from '../backend/Main';
+
 export const Areaone = () => {
     const [areaName, setAreaName] = useState();
     const location = useLocation();
     const [ propDet, setPropData ] = useState([]);
     const [load, setLoad] = useState(false)
 
+    // useEffect(()=>{
+    //     setAreaName(location.state.from.area)
+    //     const fetchPromise = fetch("/properties_menu");
+    //     fetchPromise.then(response => {
+    //         return response.json();
+    //         }).then(e => {
+    //             setPropData(e);
+    //             setLoad(true)
+    //             // console.log(e)
+    //     })
+    //     console.log(location.state.from.area)
+    // },[])
+
     useEffect(()=>{
         setAreaName(location.state.from.area)
-        const fetchPromise = fetch("/properties_menu");
-        fetchPromise.then(response => {
-            return response.json();
-            }).then(e => {
-                setPropData(e);
-                setLoad(true)
-                // console.log(e)
-        })
-        console.log(location.state.from.area)
-    },[])
+        setPropData(propAPI);
+    })
 
        
   return (
@@ -35,7 +43,7 @@ export const Areaone = () => {
         
         {/* LOADING SECTION */}
 
-        <center>
+        {/* <center>
         <div className='loader-allproperty'>
             {
                 load ? null : 
@@ -47,7 +55,7 @@ export const Areaone = () => {
                 </>
             }
         </div>
-        </center>
+        </center> */}
 
         
         {/* empty page */}
@@ -63,6 +71,7 @@ export const Areaone = () => {
             null
         }
         
+        <div className='areaone-cards'>
 
         {
             Object.entries(propDet).filter(([key, value]) => {
@@ -91,6 +100,7 @@ export const Areaone = () => {
                 })
         
         }
+         </div>
          </div>
             </div>
             <Footer/>

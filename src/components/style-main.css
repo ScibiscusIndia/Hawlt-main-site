@@ -85,6 +85,15 @@
     width: 200px;
 }
 
+/* mobile view */
+@media only screen and (max-width: 600px){
+	.form-control{
+        /* background-color: red; */
+        width: 340px;
+    }
+}
+
+
 /* subpage-crousal */
 .carousel-item{
    height: 500px;
@@ -188,5 +197,57 @@
 .col:hover{
     transform: scale(1.1);
 }
+
+
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+  .all-prop-main{
+    /* background-color: red; */
+    margin-left: -14px;
+    }
+    .search-input-all{
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .compo3-mob-view{
+        margin-left: -10px;
+        /* background-color: red; */
+    }
+}
+
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .areaone-cards{
+        margin-left: -10px;
+        /* background-color: red; */
+    }
+}
+
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .popularcity-cards-col{
+        padding-top: 8px;
+        padding-bottom: 8px;
+        /* background-color: red; */
+    }
+}
+
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .review-mob-view{
+        /* background-color: red; */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+
+
+
+
 
 /* 👌😍 */
