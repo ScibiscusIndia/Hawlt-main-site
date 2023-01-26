@@ -42,7 +42,7 @@ export const Component3 = () => {
       <div className='heading-compo3'>
         <p class="h1"><strong>Some hand picked stays <br /> For you.😍</strong></p>
       </div><br />
-    <div className="container text-center compo3-mob-view">
+    <div className=" container text-center compo3-mob-view">
       <div className="row">
         <div className="col">
           
@@ -77,6 +77,7 @@ export const Component3 = () => {
           }
         </div>
       </div>
+      
       </div>
       {/* second row */}
       <div className="container compo3-mob-view">

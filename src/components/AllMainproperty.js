@@ -5,10 +5,8 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Propertycard } from './cards/Propertycard'
 import {propAPI} from '../components/backend/Main'
-import { LandingPage } from './LandingPage';
-import { Maintab } from './Tabs/Maintab';
 
-export const Allproperty = () => {
+export const AllMainproperty = () => {
     //calling the data api.
   const [ propDet, setPropData ] = useState([]);
   const [load, setLoad] = useState(false)
@@ -33,11 +31,6 @@ export const Allproperty = () => {
 
   return (
     <div >
-        {/* <NavBar/>
-        <LandingPage/>
-        <Maintab/> */}
-        
-
 
 
         {/* LOADING SECTION */}
@@ -79,8 +72,6 @@ export const Allproperty = () => {
                     })}
                </div>
             </div>
-
-        {/* <Footer/> */}
     </div>
   )
 }

@@ -19,21 +19,30 @@ import { Userpro } from './components/users/Userpro';
 import { Checkout } from './components/checkout/Checkout';
 import { Guest } from './components/users/Guest';
 import { Areaone } from './components/pgareas/Areaone';
+import { Addprop } from './components/Addproperty/Addprop';
+import { Successaddprop } from './components/Addproperty/Successaddprop';
 // import { Garbage } from './components/Garbage';
+import { Tabone } from './components/Tabs/Tabone';
+import { Optionstab } from './components/Optionstab';
 
 
 function App() {
   return (
     <div >
+      <Homepage/>
+      <Optionstab/>
       <Routes>
-        <Route path='/' element={<Homepage/>} />
         <Route path='/propDetails' element={<Subpage/>} />
-        <Route path='/AllpropMenu' element={<Allproperty/>} />
+        <Route path='AllpropMenu' element={<Allproperty/>} />
         <Route path='/UserProfile' element={<Userpro/>} />
         <Route path='/UserCheckout89Property' element={<Checkout/>} />
         <Route path='/GuestRoute98page' element={<Guest/>} />
         <Route path='/popularcity89page' element={<Areaone/>} />
+        <Route path='/HostPropertyStayindex0' element={<Addprop/>} />
+        <Route path='/added-prop-si=uuess405' element={<Successaddprop/>} />
+        <Route path='/tabone' element={<Tabone/>} />
       </Routes>
+      <Allproperty/>
     </div>
   );
 }

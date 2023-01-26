@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './style-main.css'
+
 
 export const Hostprop = () => {
   return (
@@ -21,7 +23,9 @@ export const Hostprop = () => {
                     <p className="seemore-para">Stunning <strong>free assistance</strong> for hosting your stays.</p>
                 </li>
                 <li>
-                    <button className='host-but-01' ><strong>Host</strong></button>
+                    <Link to = '/HostPropertyStayindex0'>
+                        <button className='host-but-01' ><strong>Host</strong></button>
+                    </Link>
                 </li>
             </ul>
         </div>

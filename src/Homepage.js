@@ -14,6 +14,9 @@ import {Mobilelanding} from './mobile-view/Mobilelanding';
 // import { Main } from './components/backend/Main';
 // import { Routes, Route } from 'react-router-dom';
 // import { Subpage } from './components/Subpage';
+import {AllMainproperty} from './components/AllMainproperty'
+import { Maintab } from './components/Tabs/Maintab';
+import { Landingheading } from './components/Landingheading';
 
 
 
@@ -35,41 +38,7 @@ function Homepage() {
   console.log(myWidth);
   return (
     <div >      
-      {/* My nav is here */}
-      <div className='main-nav-app'><NavBar/></div>
-
-      {/* My Landing sofa wallpaper */}
-      {
-        myWidth > 900 ? <div><LandingPage/></div> : <Mobilelanding/>
-      }
-      
-     
-     {/* Popular cities in the list */}
-      <center>
-        <div className="main-app-prop-ci"><Popularcity/></div>
-      </center>
-
-      {/* All the property hosted is listed here total 6 here. */}
-      <div className='compo3-mob'>
-        <Component3/>
-      </div>
-      
-
-      {/* Seemore banner */}
-      <Seemore/><br />
-
-      {/* Travel guide with optioons like malls and beaches. */}
-      <Travelmenu/><br />
-
-      {/* Hosting property banner is here. */}
-      <Hostprop/>
-
-      {/* contacting form */}
-      <Contactform/>
-
-      {/* Footer section */}
-      <Footer/>
-
+      <Landingheading/>
     </div>
   );
 }
