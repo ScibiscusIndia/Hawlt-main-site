@@ -15,7 +15,7 @@ export const Subpage = () => {
   return (
     <div>
       <div className='subpage-nav'>
-        <NavBar/>
+        {/* <NavBar/> */}
       </div>
 
       <div class="alert alert-primary container" role="alert">

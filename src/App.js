@@ -22,15 +22,21 @@ import { Areaone } from './components/pgareas/Areaone';
 import { Addprop } from './components/Addproperty/Addprop';
 import { Successaddprop } from './components/Addproperty/Successaddprop';
 // import { Garbage } from './components/Garbage';
-import { Tabone } from './components/Tabs/Tabone';
+import { Tabtwo } from './components/Tabs/Tabtwo';
 import { Optionstab } from './components/Optionstab';
+import { Footer } from './components/Footersection';
 
 
 function App() {
   return (
     <div >
-      <Homepage/>
-      <Optionstab/>
+      <div className='main_head_09'>
+        <Homepage/>
+        <center>
+          <Optionstab/>
+        </center>
+      </div>
+      
       <Routes>
         <Route path='/propDetails' element={<Subpage/>} />
         <Route path='AllpropMenu' element={<Allproperty/>} />
@@ -40,9 +46,10 @@ function App() {
         <Route path='/popularcity89page' element={<Areaone/>} />
         <Route path='/HostPropertyStayindex0' element={<Addprop/>} />
         <Route path='/added-prop-si=uuess405' element={<Successaddprop/>} />
-        <Route path='/tabone' element={<Tabone/>} />
+        <Route path='/tabtwo-position3in' element={<Tabtwo/>} />
       </Routes>
       <Allproperty/>
+      <Footer/>
     </div>
   );
 }
